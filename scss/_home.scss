@@ -9,12 +9,15 @@
         padding-top: 20.7rem;
         &.slide-01 {
           background: url(../img/bg-banner-01.jpg) no-repeat center center;
+          background-size: 100%;
         }
         &.slide-02 {
           background: url(../img/bg-banner02.jpg) no-repeat center center;
+          background-size: 100%;
         }
         &.slide-03 {
           background: url(../img/bg-banner-03.jpg) no-repeat center center;
+          background-size: 100%;
           .left-content {
             max-width: 62.6rem;
           }
