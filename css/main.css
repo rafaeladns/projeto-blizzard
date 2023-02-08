@@ -40,6 +40,35 @@ body {
   }
 }
 
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -508,6 +537,118 @@ header .right-container .btn:not(:first-child) {
 }
 .s-games .tab-games-content .tab-pane-games .card-all-games span img {
   margin-right: 1.3rem;
+}
+
+.s-download {
+  width: 100%;
+  height: 85rem;
+  background: url("../img/background-section-download.png") no-repeat center center;
+  overflow: hidden;
+  background-size: cover;
+}
+.s-download .container {
+  position: relative;
+}
+.s-download .text-left {
+  width: 100%;
+  max-width: 29.9rem;
+  padding-top: 13.2rem;
+}
+.s-download .text-left .logo {
+  margin-bottom: 3rem;
+}
+.s-download .text-left h2 {
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 110.2%;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+.s-download .text-left ul {
+  margin-bottom: 4.2rem;
+}
+.s-download .text-left ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.s-download .text-left ul li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+.s-download .text-left ul li .icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 1.6rem;
+}
+.s-download .text-left ul li p {
+  font-size: 1.8rem;
+  line-height: 178.2%;
+  color: #828792;
+}
+.s-download .text-left .btn {
+  padding: 0rem 4rem;
+  line-height: 5.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 4.9rem;
+}
+.s-download .text-left .app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.s-download .text-left .app p {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #e5e5e5;
+  max-width: 19rem;
+  margin-left: 1.8rem;
+}
+.s-download .text-left .app p a {
+  text-decoration: underline;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.s-download .text-left .app p a:hover {
+  color: #61CDFF;
+}
+.s-download .image {
+  position: absolute;
+  top: 9.9rem;
+  right: -27.5rem;
+  width: 100%;
+  max-width: 106.6rem;
+  height: 61rem;
+}
+.s-download .image .img-lg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: float 8s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
+}
+.s-download .image .img-sm {
+  position: absolute;
+  right: 19.9rem;
+  bottom: -2.8rem;
+  -webkit-animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
 @-webkit-keyframes fadeUp {
