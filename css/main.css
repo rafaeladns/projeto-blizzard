@@ -651,6 +651,188 @@ header .right-container .btn:not(:first-child) {
   animation: float 6s ease-in-out infinite;
 }
 
+.show-modal .modal {
+  opacity: 1;
+  pointer-events: all;
+}
+.show-modal .modal .box {
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2023;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.modal .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal .box {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 69.9rem;
+  height: 60rem;
+  background: url("../img/bg-modal.png") no-repeat #020203 top left;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.modal .box .close {
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+}
+.modal .box .logo {
+  margin-bottom: 4rem;
+  width: 16.6rem;
+}
+.modal .box form {
+  width: 100%;
+  max-width: 42.6rem;
+}
+.modal .box form .form-group {
+  margin-bottom: 1.6rem;
+}
+.modal .box form .form-group:last-child {
+  margin-bottom: 2.4rem;
+}
+.modal .box form .form-group input[type=text],
+.modal .box form .form-group input[type=password] {
+  width: 100%;
+  height: 4.8rem;
+  border-radius: 4px;
+  border: none;
+  padding: 0rem 1.6rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #363842;
+}
+.modal .box form .form-group input[type=text]::-webkit-input-placeholder, .modal .box form .form-group input[type=password]::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+.modal .box form .form-group input[type=text]::-moz-placeholder, .modal .box form .form-group input[type=password]::-moz-placeholder {
+  opacity: 0.6;
+}
+.modal .box form .form-group input[type=text]:-ms-input-placeholder, .modal .box form .form-group input[type=password]:-ms-input-placeholder {
+  opacity: 0.6;
+}
+.modal .box form .form-group input[type=text]::-ms-input-placeholder, .modal .box form .form-group input[type=password]::-ms-input-placeholder {
+  opacity: 0.6;
+}
+.modal .box form .form-group input[type=text]::placeholder,
+.modal .box form .form-group input[type=password]::placeholder {
+  opacity: 0.6;
+}
+.modal .box form .form-group button {
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.modal .box .others-conect {
+  margin-bottom: 3.5rem;
+}
+.modal .box .others-conect p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #FFFFFF;
+  margin-bottom: 1.6rem;
+}
+.modal .box .others-conect ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal .box .others-conect ul li:not(:first-child) {
+  margin-left: 1.6rem;
+}
+.modal .box .others-conect ul li button {
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.modal .box .message-user p {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 1.6rem;
+}
+.modal .box .message-user p a {
+  display: inline-block;
+}
+.modal .box .message-user a {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-decoration-line: underline;
+  color: #00AEFF;
+  text-align: center;
+  display: block;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.modal .box .message-user a:hover {
+  color: #FFFFFF;
+}
+
 @-webkit-keyframes fadeUp {
   from {
     opacity: 0;
