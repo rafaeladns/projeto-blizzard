@@ -54,3 +54,32 @@ btnCloseModal.addEventListener('click', () => {
   let tagHtml = document.documentElement;
   tagHtml.classList.remove('show-modal');
 })
+
+
+//Abrir e fechar menu de jogos  e esportes
+
+const btnMenu = document.querySelectorAll('.js-btn-menu');
+const MenuSite = document.querySelectorAll('.js-menu');
+
+btnMenu.forEach((btn, index) => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    MenuSite.forEach(itemMenu => {
+      itemMenu.classList.remove('active');
+      itemMenu.addEventListener('mouseleave', () => {
+        itemMenu.classList.remove('active');
+        btnMenu.forEach(itembBtn => {
+          itembBtn.classList.remove('active');
+        })
+      })
+    })
+
+    btnMenu.forEach(itembBtn => {
+      itembBtn.classList.remove('active');
+    })
+
+    btn.classList.add('active');
+    MenuSite[index].classList.add('active');
+  })
+})
