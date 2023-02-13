@@ -1,6 +1,5 @@
 // Section Hero
 .s-hero {
-  display: none;
   z-index: 2;
   position: relative;
   .slide-principal {
@@ -152,6 +151,104 @@
           filter: grayscale(0%);
         }
       }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .slide-thumbnail {
+      left: 1%;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .slide-principal {
+      .swiper-wrapper {
+        .swiper-slide {
+          &.slide-02 {
+            .left-content {
+              max-width: 46.2rem;
+              h2 {
+                font-size: 5.8rem;
+              }
+            }
+          }
+          .left-content {
+            margin-left: 0;
+            h2 {
+              font-size: 6.4rem;
+            }
+          }
+
+          .right-content {
+            position: absolute;
+            right: 0;
+
+            .logo {
+              margin-top: -5.3rem;
+              margin-bottom: 21rem;
+            }
+          }
+        }
+      }
+    }
+
+    .slide-thumbnail {
+      left: 1.5rem;
+      top: initial;
+      bottom: 10.5rem;
+      height: 4.8rem;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .slide-principal {
+      height: 62.2rem;
+      .swiper-wrapper {
+        .swiper-slide {
+          padding-top: 13.1rem;
+          &.slide-01 {
+            background-position-x: 40%;
+          }
+          &.slide-02 {
+            background-position-x: 63%;
+            .left-content {
+              h2 {
+                font-size: 4rem;
+              }
+
+              p {
+                max-width: 30.5rem;
+                font-size: 1.6rem;
+              }
+            }
+          }
+          &.slide-03 {
+            background-position-x: 60%;
+            .left-content {
+              h2 {
+                max-width: 33rem;
+              }
+
+              p {
+                max-width: 26rem;
+              }
+            }
+          }
+          .left-content {
+            max-width: 28.3rem;
+            h2 {
+              font-size: 4rem;
+            }
+          }
+          .right-content {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .slide-thumbnail {
+      bottom: 6.5rem;
     }
   }
 }
@@ -376,7 +473,7 @@
 }
 .modal {
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
   z-index: 2023;
   width: 100%;
@@ -386,8 +483,7 @@
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .3s;
-
+  transition: opacity 0.3s;
 
   .overlay {
     position: fixed;
@@ -412,7 +508,7 @@
     align-items: center;
     justify-content: center;
     transform: translateY(50px);
-    transition: transform .3s;
+    transition: transform 0.3s;
 
     .close {
       position: absolute;
@@ -434,7 +530,7 @@
         &:last-child {
           margin-bottom: 2.4rem;
         }
-        
+
         input[type="text"],
         input[type="password"] {
           width: 100%;
@@ -447,9 +543,8 @@
           line-height: 2.2rem;
           color: #363842;
           &::placeholder {
-           opacity: 0.6; 
+            opacity: 0.6;
           }
-
         }
 
         button {
@@ -468,7 +563,7 @@
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 2.1rem;
-        color: #FFFFFF;
+        color: #ffffff;
         margin-bottom: 1.6rem;
       }
 
@@ -482,7 +577,7 @@
           button {
             width: 4.8rem;
             height: 4.8rem;
-            background-color: #FFFFFF;
+            background-color: #ffffff;
             border-radius: 4px;
             display: flex;
             align-items: center;
@@ -498,10 +593,10 @@
         font-size: 1.6rem;
         line-height: 2.4rem;
         font-weight: 600;
-        color: #FFFFFF;
+        color: #ffffff;
         margin-bottom: 1.6rem;
         a {
-         display: inline-block; 
+          display: inline-block;
         }
       }
 
@@ -513,9 +608,9 @@
         color: $primary-default;
         text-align: center;
         display: block;
-        transition: color .3s;
+        transition: color 0.3s;
         &:hover {
-         color: #FFFFFF; 
+          color: #ffffff;
         }
       }
     }

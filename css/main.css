@@ -401,7 +401,6 @@ header .right-container .btn-mobile {
 }
 
 .s-hero {
-  display: none;
   z-index: 2;
   position: relative;
 }
@@ -575,6 +574,81 @@ header .right-container .btn-mobile {
   opacity: 1;
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
+}
+@media (max-width: 1200px) {
+  .s-hero .slide-thumbnail {
+    left: 1%;
+  }
+}
+@media (max-width: 991px) {
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide.slide-02 .left-content {
+    max-width: 46.2rem;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide.slide-02 .left-content h2 {
+    font-size: 5.8rem;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide .left-content {
+    margin-left: 0;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide .left-content h2 {
+    font-size: 6.4rem;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide .right-content {
+    position: absolute;
+    right: 0;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide .right-content .logo {
+    margin-top: -5.3rem;
+    margin-bottom: 21rem;
+  }
+  .s-hero .slide-thumbnail {
+    left: 1.5rem;
+    top: initial;
+    bottom: 10.5rem;
+    height: 4.8rem;
+  }
+}
+@media (max-width: 560px) {
+  .s-hero .slide-principal {
+    height: 62.2rem;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide {
+    padding-top: 13.1rem;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide.slide-01 {
+    background-position-x: 40%;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide.slide-02 {
+    background-position-x: 63%;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide.slide-02 .left-content h2 {
+    font-size: 4rem;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide.slide-02 .left-content p {
+    max-width: 30.5rem;
+    font-size: 1.6rem;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide.slide-03 {
+    background-position-x: 60%;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide.slide-03 .left-content h2 {
+    max-width: 33rem;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide.slide-03 .left-content p {
+    max-width: 26rem;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide .left-content {
+    max-width: 28.3rem;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide .left-content h2 {
+    font-size: 4rem;
+  }
+  .s-hero .slide-principal .swiper-wrapper .swiper-slide .right-content {
+    display: none;
+  }
+  .s-hero .slide-thumbnail {
+    bottom: 6.5rem;
+  }
 }
 
 .s-games {
@@ -963,7 +1037,7 @@ header .right-container .btn-mobile {
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 2.1rem;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 1.6rem;
 }
 .modal .box .others-conect ul {
@@ -977,7 +1051,7 @@ header .right-container .btn-mobile {
 .modal .box .others-conect ul li button {
   width: 4.8rem;
   height: 4.8rem;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -994,7 +1068,7 @@ header .right-container .btn-mobile {
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 1.6rem;
 }
 .modal .box .message-user p a {
@@ -1012,7 +1086,7 @@ header .right-container .btn-mobile {
   transition: color 0.3s;
 }
 .modal .box .message-user a:hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 @-webkit-keyframes fadeUp {
