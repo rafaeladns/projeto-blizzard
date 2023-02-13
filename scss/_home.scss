@@ -1,5 +1,6 @@
 // Section Hero
 .s-hero {
+  display: none;
   z-index: 2;
   position: relative;
   .slide-principal {
@@ -157,6 +158,7 @@
 
 //Section Games
 .s-games {
+  display: none;
   padding-top: 8.3rem;
   padding-bottom: 11rem;
   .top {
@@ -264,6 +266,7 @@
 
 // Section Downloads
 .s-download {
+  display: none;
   width: 100%;
   height: 85rem;
   background: url("../img/background-section-download.png") no-repeat center
@@ -360,7 +363,9 @@
 }
 
 // Modal//
+
 .show-modal {
+  display: none;
   .modal {
     opacity: 1;
     pointer-events: all;

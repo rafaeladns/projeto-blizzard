@@ -72,6 +72,48 @@ header {
         margin-left: 1.6rem;
       }
     }
+
+    .btn-mobile {
+      display: none;
+    }
+  }
+  @media(max-width: 991px) {
+    .left-container {
+      nav {
+        display: none;
+      }
+    }
+
+    .right-container {
+      .btn-mobile{
+        display: block;
+        margin-left: 8.9rem;
+      }
+    }
+  }
+
+  @media(max-width: 560px) {
+    height: 8rem;
+    .left-container {
+      .logo {
+        max-width: 6.9rem;
+      }
+
+      .logo:after {
+        content: "";
+        width: 4.3rem;
+        border-top: 2px solid #00aeff;
+        position: absolute;
+        left: 0;
+        bottom: -2.5rem;
+    }
+    
+    }
+    .right-container {
+      .btn {
+        display: none;
+      }
+    }
   }
 }
 
@@ -190,5 +232,9 @@ header {
         }
       }
     }
+  }
+
+  @media(max-width:560px) {
+    display: none;
   }
 }
