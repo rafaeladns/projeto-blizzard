@@ -1,30 +1,52 @@
-var slide_thumbnail = new Swiper(".slide-thumbnail", {
+var slide_thumbnail = new Swiper('.slide-thumbnail', {
   slidesPerView: 5,
-  direction: "vertical",
+  direction: 'vertical',
   spaceBetween: 20,
   watchSlidesProgress: true,
   breakpoints: {
     320: {
-      direction: "horizontal",
+      direction: 'horizontal',
     },
     1150: {
-      direction: "vertical",
+      direction: 'vertical',
     },
   },
 });
 
-var slide_hero = new Swiper(".slide-principal", {
-  effect: "fade",
+const progressSlide = document.querySelector('.js-progress');
+
+var slide_hero = new Swiper('.slide-principal', {
+  effect: 'fade',
   thumbs: {
     swiper: slide_thumbnail,
   },
   autoplay: {
     delay: 5000,
-    disableOnInteraction: false,
+    disableOnInteraction: false
   },
+
+  on: {
+    init: function () {
+      progressSlide.classList.remove('animate');
+      progressSlide.classList.remove('active');
+      progressSlide.classList.add('animate');
+      progressSlide.classList.add('active');
+    },
+
+    slideChangeTransitionStart: function () {
+      progressSlide.classList.remove('animate');
+      progressSlide.classList.remove('active');
+      progressSlide.classList.add('active');
+    },
+
+    slideChangeTransitionEnd: function () {
+      progressSlide.classList.add('animate');
+    }
+
+  }
 });
 
-const allFilters = document.querySelectorAll(".js-nav-games li a");
+const allFilters = document.querySelectorAll('.js-nav-games li a');
 const tabPane = document.querySelectorAll(".tab-pane-games");
 
 allFilters.forEach((filter, index) => {
@@ -46,45 +68,45 @@ allFilters.forEach((filter, index) => {
 });
 
 // Abrir e fechar modal
-const btnOpenModal = document.querySelector(".js-open-modal");
-const btnCloseModal = document.querySelector(".js-close");
+const btnOpenModal = document.querySelector('.js-open-modal');
+const btnCloseModal = document.querySelector('.js-close');
 
-btnOpenModal.addEventListener("click", (event) => {
+btnOpenModal.addEventListener('click', (event) => {
   event.preventDefault();
 
   let tagHtml = document.documentElement;
-  tagHtml.classList.add("show-modal");
+  tagHtml.classList.add('show-modal');
 });
 
-btnCloseModal.addEventListener("click", () => {
+btnCloseModal.addEventListener('click', () => {
   let tagHtml = document.documentElement;
-  tagHtml.classList.remove("show-modal");
+  tagHtml.classList.remove('show-modal');
 });
 
 //Abrir e fechar menu de jogos  e esportes
 
-const btnMenu = document.querySelectorAll(".js-btn-menu");
-const MenuSite = document.querySelectorAll(".js-menu");
+const btnMenu = document.querySelectorAll('.js-btn-menu');
+const MenuSite = document.querySelectorAll('.js-menu');
 
 btnMenu.forEach((btn, index) => {
-  btn.addEventListener("click", (event) => {
+  btn.addEventListener('click', (event) => {
     event.preventDefault();
 
     MenuSite.forEach((itemMenu) => {
-      itemMenu.classList.remove("active");
-      itemMenu.addEventListener("mouseleave", () => {
-        itemMenu.classList.remove("active");
+      itemMenu.classList.remove('active');
+      itemMenu.addEventListener('mouseleave', () => {
+        itemMenu.classList.remove('active');
         btnMenu.forEach((itembBtn) => {
-          itembBtn.classList.remove("active");
+          itembBtn.classList.remove('active');
         });
       });
     });
 
     btnMenu.forEach((itembBtn) => {
-      itembBtn.classList.remove("active");
+      itembBtn.classList.remove('active');
     });
 
-    btn.classList.add("active");
-    MenuSite[index].classList.add("active");
+    btn.classList.add('active');
+    MenuSite[index].classList.add('active');
   });
 });

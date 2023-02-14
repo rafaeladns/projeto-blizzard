@@ -429,6 +429,7 @@ header .right-container .btn-mobile {
 }
 .s-hero .slide-principal .swiper-wrapper .swiper-slide {
   padding-top: 20.7rem;
+  background-size: cover !important;
 }
 .s-hero .slide-principal .swiper-wrapper .swiper-slide.slide-01 {
   background: url(../img/bg-banner-01.jpg) no-repeat center center;
@@ -593,6 +594,43 @@ header .right-container .btn-mobile {
   opacity: 1;
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
+}
+.s-hero .swiper-progress-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  z-index: 2;
+}
+.s-hero .swiper-progress-bar .slide-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 3px;
+  opacity: 0;
+  display: block;
+}
+.s-hero .swiper-progress-bar .slide-progress-bar:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00AEFF;
+  width: 0;
+  height: 100%;
+  -webkit-transition: width 0.1s linear;
+  transition: width 0.1s linear;
+}
+.s-hero .swiper-progress-bar.active .slide-progress-bar {
+  opacity: 1;
+}
+.s-hero .swiper-progress-bar.animate .slide-progress-bar:after {
+  width: 100%;
+  -webkit-transition: width 5s linear;
+  transition: width 5s linear;
 }
 @media (max-width: 1200px) {
   .s-hero .slide-thumbnail {

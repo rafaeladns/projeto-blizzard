@@ -8,6 +8,7 @@
     .swiper-wrapper {
       .swiper-slide {
         padding-top: 20.7rem;
+        background-size: cover !important;
         &.slide-01 {
           background: url(../img/bg-banner-01.jpg) no-repeat center center;
           background-size: cover;
@@ -153,7 +154,50 @@
       }
     }
   }
+  .swiper-progress-bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    z-index: 2;
+    .slide-progress-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: auto;
+      height: 3px;
+      opacity: 0;
+      display: block;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $primary-default;
+        width: 0;
+        height: 100%;
+        transition: width 0.1s linear;
+      }
 
+    }
+
+    &.active {
+      .slide-progress-bar {
+        opacity: 1;
+      }
+    }
+
+    &.animate {
+      .slide-progress-bar {
+        &:after {
+          width: 100%;
+          transition: width 5s linear;
+        }
+      }
+    }
+  }
   @media (max-width: 1200px) {
     .slide-thumbnail {
       left: 1%;
